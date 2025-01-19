@@ -168,11 +168,10 @@ if __name__ == "__main__":
     # Train BPE tokenizer
     merges, vocab, encoded_data, total_tokens, vocab_size = train_bpe(bag_of_encoded_words, num_merges)
 
-    # Step 3: Calculate compression ratio
+   
     compression_ratio = calculate_compression_ratio(bag_of_encoded_words, encoded_data)
 
-compression_ratio
-
+#Example
 hindi_sentence = "जो कि पक्षपाती हैं और बेतरतीबी नतीज़ें देती हैं।"
 encoded_hindi = encode_text(hindi_sentence, merges) # Encoding
 decoded_hindi = decode_text(encoded_hindi, vocab)   # Decoding
